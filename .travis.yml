@@ -1,0 +1,31 @@
+sudo: required
+dist: trusty
+
+language: java
+
+jdk: oraclejdk8
+
+addons:
+  sonarqube:
+    organization: "ebolon"
+    token:
+      secure: $SONAR_TOKEN
+    branches:
+      - development
+
+before_script:
+  - git clone https://github.com/eclipse/vorto.git
+  - cd vorto
+  - gsed -i '/<modules>/a <module>vorto-eclipse-plugin<\/module>' pom.xml
+
+before_install: echo "MAVEN_OPTS='-Xms1g -Xmx2g -XX:PermSize=512m -XX:MaxPermSize=1g'" > ~/.mavenrc
+
+install: true
+script:
+  - cd ..
+  - mvn clean install -f pom.xml
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
