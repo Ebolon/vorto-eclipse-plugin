@@ -5,7 +5,7 @@
 
 	<parent>
 		<groupId>org.eclipse.vorto</groupId>
-		<artifactId>eclipse-plugin</artifactId>
+		<artifactId>bundles</artifactId>
 		<version>0.10.0-SNAPSHOT</version>
 	</parent>
 
