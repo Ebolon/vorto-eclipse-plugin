@@ -14,15 +14,17 @@ addons:
       - development
 
 before_script:
+  - cd ..
   - git clone https://github.com/eclipse/vorto.git
+  - mv vorto-eclipse-plugin vorto
   - cd vorto
   - sed -i '/<modules>/a <module>vorto-eclipse-plugin<\/module>' pom.xml
+  
 
 before_install: echo "MAVEN_OPTS='-Xms1g -Xmx2g -XX:PermSize=512m -XX:MaxPermSize=1g'" > ~/.mavenrc
 
 install: true
 script:
-  - mv ../vorto-eclipse-plugin .
   - mvn clean install -f pom.xml
 
 cache:
