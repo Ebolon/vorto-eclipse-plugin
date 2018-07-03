@@ -22,7 +22,7 @@ before_install: echo "MAVEN_OPTS='-Xms1g -Xmx2g -XX:PermSize=512m -XX:MaxPermSiz
 
 install: true
 script:
-  - cd ..
+  - mv ../vorto-eclipse-plugin .
   - mvn clean install -f pom.xml
 
 cache:
