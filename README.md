@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/Ebolon/vorto-eclipse-plugin.svg?branch=master)](https://travis-ci.org/Ebolon/vorto-eclipse-plugin)
+[![Build Status](https://travis-ci.org/Ebolon/vorto-eclipse-plugin.svg?branch=master)](https://travis-ci.org/Ebolon/vorto-eclipse-plugin) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=org.eclipse.vorto:vorto-eclipse-plugin&metric=alert_status)](https://sonarcloud.io/dashboard?id=org.eclipse.vorto:vorto-eclipse-plugin)
+
 
 # Vorto Eclipse Plugin
 The Eclipse Plugin was discontinued by the Eclipse Vorto project. This is a friendly fork from the Vorto Repository and not officially related to Eclipse Vorto.
