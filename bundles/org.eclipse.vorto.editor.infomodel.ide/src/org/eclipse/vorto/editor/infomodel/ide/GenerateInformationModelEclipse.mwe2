@@ -32,18 +32,18 @@ Workflow {
 				rootPath = rootPath
 				eclipsePlugin = {
 					enabled = true
-					root = '${rootPath}/../../vorto-eclipse-plugin/bundles/org.eclipse.vorto.editor.infomodel.ui'
+					root = '${rootPath}/../../../vorto-eclipse-plugin/bundles/org.eclipse.vorto.editor.infomodel.ui'
 				}	
 				genericIde = {
         			enabled = true
-        			root = '${rootPath}/../../vorto-eclipse-plugin/bundles/org.eclipse.vorto.editor.infomodel.ide'
+        			root = '${rootPath}/../../../vorto-eclipse-plugin/bundles/org.eclipse.vorto.editor.infomodel.ide'
 		        }
 		        web = {
 		        	enabled = false
 		        }
 		        runtimeTest = {
 		        	enabled = true
-		        	root = '${rootPath}/../../vorto-eclipse-plugin/bundles/org.eclipse.vorto.editor.infomodel.tests'
+		        	root = '${rootPath}/../../../vorto-eclipse-plugin/bundles/org.eclipse.vorto.editor.infomodel.tests'
 		        }
 				createEclipseMetaData = true
 			}

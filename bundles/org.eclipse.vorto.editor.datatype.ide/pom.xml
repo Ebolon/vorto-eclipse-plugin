@@ -37,7 +37,7 @@
 							-p
 						</argument>
 						<argument>
-							rootPath=/${project.basedir}/../../../core-bundles/language/
+							rootPath=/${project.basedir}/../../../vorto/core-bundles/language/
 						</argument>
 					</arguments>
 				</configuration>
