@@ -42,3 +42,4 @@ Export-Package: org.eclipse.vorto.editor.mapping.ui.quickfix,
  org.eclipse.vorto.editor.mapping.ide.contentassist.antlr.internal,
  org.eclipse.vorto.editor.mapping.ide.contentassist.antlr
 Bundle-Activator: org.eclipse.vorto.editor.mapping.ui.internal.MappingActivator
+Automatic-Module-Name: org.eclipse.vorto.editor.mapping.ui

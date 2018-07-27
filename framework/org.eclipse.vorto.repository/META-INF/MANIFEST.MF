@@ -24,4 +24,5 @@ Bundle-ActivationPolicy: lazy
 Bundle-Vendor: Eclipse.org/Vorto
 Export-Package: org.eclipse.vorto.repository,
  org.eclipse.vorto.repository.preferences
+Automatic-Module-Name: org.eclipse.vorto.repository
 

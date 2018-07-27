@@ -18,3 +18,4 @@ Export-Package: org.eclipse.vorto.core.ui,org.eclipse.vorto.core.ui.ex
  ception,org.eclipse.vorto.core.ui.model,org.eclipse.vorto.core.ui.mod
  el.nature,org.eclipse.vorto.core.ui.parser;uses:="org.eclipse.core.re
  sources"
+Automatic-Module-Name: org.eclipse.vorto.core.ui

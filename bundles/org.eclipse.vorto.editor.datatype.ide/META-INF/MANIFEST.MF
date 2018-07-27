@@ -29,3 +29,4 @@ Export-Package: org.eclipse.vorto.editor.datatype.ide.contentassist.antlr,
  org.eclipse.vorto.editor.datatype.ide.contentassist.antlr.internal,
  org.eclipse.vorto.editor.datatype.ide.syntaxcoloring
 Import-Package: org.eclipse.vorto.editor.datatype.services
+Automatic-Module-Name: org.eclipse.vorto.editor.datatype.ide

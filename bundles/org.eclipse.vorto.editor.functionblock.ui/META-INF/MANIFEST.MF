@@ -41,3 +41,4 @@ Export-Package: org.eclipse.vorto.editor.functionblock.ui,
 Bundle-ClassPath: templates/,.,icons/
 Import-Package: org.apache.log4j
 Bundle-Activator: org.eclipse.vorto.editor.functionblock.ui.internal.FunctionblockActivator
+Automatic-Module-Name: org.eclipse.vorto.editor.functionblock.ui

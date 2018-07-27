@@ -20,3 +20,4 @@ Import-Package: org.hamcrest.core,
  org.junit.runners;version="4.5.0",
  org.junit.runners.model;version="4.5.0"
 Export-Package: org.eclipse.vorto.editor.datatype.tests
+Automatic-Module-Name: org.eclipse.vorto.editor.datatype.tests

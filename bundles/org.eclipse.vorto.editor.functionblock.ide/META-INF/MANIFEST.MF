@@ -29,3 +29,4 @@ Export-Package: org.eclipse.vorto.editor.functionblock.ide.contentassi
  lr.internal
 Import-Package: org.eclipse.vorto.editor.datatype.services,
  org.eclipse.vorto.editor.functionblock.services
+Automatic-Module-Name: org.eclipse.vorto.editor.functionblock.ide

@@ -32,3 +32,4 @@ Export-Package: org.eclipse.vorto.codegen.ui,org.eclipse.vorto.codegen
  ,org.eclipse.vorto.codegen.ui.utils,org.eclipse.vorto.codegen.ui.wiza
  rd,org.eclipse.vorto.codegen.ui.wizard.command,org.eclipse.vorto.code
  gen.ui.wizard.generation.templates
+Automatic-Module-Name: org.eclipse.vorto.codegen.ui

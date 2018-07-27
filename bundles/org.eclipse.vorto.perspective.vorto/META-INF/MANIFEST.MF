@@ -32,4 +32,5 @@ Import-Package: org.eclipse.vorto.perspective.vorto.view,
  org.eclipse.emf.ecore.xmi.impl,
  org.eclipse.xtext.resource,
  org.eclipse.xtext.ui.editor
+Automatic-Module-Name: org.eclipse.vorto.perspective.vorto
 

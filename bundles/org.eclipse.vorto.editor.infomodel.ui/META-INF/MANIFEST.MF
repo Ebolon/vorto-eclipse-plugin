@@ -39,3 +39,4 @@ Export-Package: org.eclipse.vorto.editor.infomodel.ui.contentassist,
  org.eclipse.vorto.editor.infomodel.ui.internal,
  org.eclipse.vorto.editor.infomodel.ui.quickfix
 Bundle-Activator: org.eclipse.vorto.editor.infomodel.ui.internal.InfomodelActivator
+Automatic-Module-Name: org.eclipse.vorto.editor.infomodel.ui
