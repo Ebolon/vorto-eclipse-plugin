@@ -15,8 +15,6 @@
 package org.eclipse.vorto.core.ui;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.dialogs.MessageDialog;

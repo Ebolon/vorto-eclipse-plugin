@@ -11,7 +11,7 @@ Require-Bundle: org.eclipse.xtext.junit4,
  org.eclipse.vorto.editor.datatype,
  org.eclipse.xtext.xbase.junit,
  org.eclipse.xtext.xbase.lib
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: org.hamcrest.core,
  org.junit;version="4.5.0",
  org.junit.runner;version="4.5.0",

@@ -19,8 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.vorto.core.api.repository.GeneratorResource;
-import org.eclipse.vorto.repository.model.ModelView;
-
 import com.google.common.base.Function;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
