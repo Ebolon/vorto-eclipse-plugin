@@ -38,7 +38,8 @@ Export-Package: org.eclipse.vorto.editor.functionblock.ui,
  org.eclipse.vorto.editor.functionblock.ui.contentassist,
  org.eclipse.vorto.editor.functionblock.ui.internal,
  org.eclipse.vorto.editor.functionblock.ui.quickfix
-Bundle-ClassPath: templates/,.,icons/
+Bundle-ClassPath: templates/,
+ .
 Import-Package: org.apache.log4j
 Bundle-Activator: org.eclipse.vorto.editor.functionblock.ui.internal.FunctionblockActivator
 Automatic-Module-Name: org.eclipse.vorto.editor.functionblock.ui
