@@ -44,14 +44,14 @@ class ProjectFileOutputter implements IGeneratedWriter {
 
 		try {
 			var IFolder folder = null;
-			if (generated.getFolderPath() != null) { // make sure that folders are created before file
+			if (generated.getFolderPath() !== null) { // make sure that folders are created before file
 				folder = createProjectFolders(generated.folderPath);
 			}
 
-			if (generated.fileName != null) {
+			if (generated.fileName !== null) {
 				
 				var IFile generatedFile = null;
-				if (folder != null) {
+				if (folder !== null) {
 					generatedFile = folder.getFile(generated.fileName);
 				} else {
 					generatedFile = project.getFile(generated.getFileName());
@@ -85,7 +85,7 @@ class ProjectFileOutputter implements IGeneratedWriter {
 	}
 		
 	public def IFileWritingStrategy getFileWritingStrategy(){
-		if(this.strategy == null){
+		if(this.strategy === null){
 			this.strategy = FileWritingStrategyFactory.getInstance.genFileStrategy;
 		}
 		this.strategy
