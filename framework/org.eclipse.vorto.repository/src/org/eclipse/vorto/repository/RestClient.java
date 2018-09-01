@@ -46,7 +46,7 @@ public class RestClient {
 
 	private ConnectionInfo connectionInfo;
 
-	private static final String RESOURCE_URL = "/rest/";
+	private static final String RESOURCE_URL = "/api/v1/";
 
 	public RestClient(ConnectionInfo connectionInfo) {
 		this.connectionInfo = connectionInfo;

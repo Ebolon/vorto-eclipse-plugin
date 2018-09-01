@@ -39,8 +39,8 @@ import com.google.common.collect.Lists;
 
 public class RestModelRepository extends Observable implements IModelRepository {
 
-	private static final String FILE_DOWNLOAD_FORMAT = "file/%s/%s/%s";
-	private static final String MODELID_RESOURCE_FORMAT = "%s/%s/%s";
+	private static final String FILE_DOWNLOAD_FORMAT = "models/%s/file";
+	private static final String MODELID_RESOURCE_FORMAT = "models/%s/content";
 	private static final String CHECKIN_FORMAT = "%s";
 
 	private Function<ModelView, ModelResource> modelViewToModelResource = new ModelViewToModelResource();
@@ -73,7 +73,7 @@ public class RestModelRepository extends Observable implements IModelRepository 
 				searchExpr = expression + " -Mapping";
 			}
 			searchExpr = searchExpr.replaceAll(" ", "%20");
-			List<ModelView> result = httpClient.executeGet(("model/query=" + searchExpr), searchResultConverter);
+			List<ModelView> result = httpClient.executeGet(("search/models?expression=" + searchExpr), searchResultConverter);
 
 			// Convert the searchResult in result to return type
 			return Lists.transform(result, modelViewToModelResource);
@@ -120,13 +120,11 @@ public class RestModelRepository extends Observable implements IModelRepository 
 	}
 
 	private String getUrlForModelDownload(ModelId modelId) {
-		return "model/"
-				+ String.format(FILE_DOWNLOAD_FORMAT, modelId.getNamespace(), modelId.getName(), modelId.getVersion());
+		return String.format(FILE_DOWNLOAD_FORMAT, modelId.getPrettyFormat());
 	}
 
 	private String getUrlForModel(ModelId modelId) {
-		return "model/" + String.format(MODELID_RESOURCE_FORMAT, modelId.getNamespace(), modelId.getName(),
-				modelId.getVersion());
+		return String.format(MODELID_RESOURCE_FORMAT, modelId.getPrettyFormat());
 	}
 
 	@Override
@@ -142,7 +140,7 @@ public class RestModelRepository extends Observable implements IModelRepository 
 	@Override
 	public List<GeneratorResource> listGenerators() {
 		try {
-			List<GeneratorResource> result = httpClient.executeGet("generation-router/platform",
+			List<GeneratorResource> result = httpClient.executeGet("generators",
 					searchGeneratorResultConverter);
 			return result;
 		} catch (RepositoryException e) {
@@ -155,8 +153,7 @@ public class RestModelRepository extends Observable implements IModelRepository 
 	@Override
 	public Attachment generateCode(ModelId model, String serviceKey) {
 		try {
-			String url = "generation-router/" + model.getNamespace() + "/" + model.getName() + "/" + model.getVersion()
-					+ "/" + URLEncoder.encode(serviceKey, "utf-8");
+			String url = "generators/" + URLEncoder.encode(serviceKey, "utf-8") + "/models/" + model.getPrettyFormat();
 			Attachment result = httpClient.executeGetAttachment(url);
 			return result;
 		} catch (RepositoryException e) {
