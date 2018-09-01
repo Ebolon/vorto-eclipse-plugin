@@ -76,6 +76,7 @@ Workflow {
 			referencedResource = "platform:/resource/org.eclipse.vorto.core/model/InformationModel.genmodel"
 			referencedResource = "platform:/resource/org.eclipse.vorto.core/model/Model.genmodel"
 			referencedResource = "platform:/resource/org.eclipse.vorto.core/model/Functionblock.genmodel"
+			referencedResource = "platform:/resource/org.eclipse.vorto.core/model/Datatype.genmodel"
 			    		
     		webSupport = {
     			framework = "Ace"
