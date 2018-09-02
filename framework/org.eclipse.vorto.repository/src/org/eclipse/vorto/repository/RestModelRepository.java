@@ -62,6 +62,10 @@ public class RestModelRepository extends Observable implements IModelRepository 
 		Objects.requireNonNull(connectionUrlSupplier);
 		this.httpClient = new RestClient(connectionUrlSupplier);
 	}
+	
+	private String getPrettyFormat(ModelId modelId) {
+		return String.format("%s.%s:%s", modelId.getNamespace(), modelId.getName(), modelId.getVersion());
+	}
 
 	@Override
 	public List<ModelResource> search(String expression) {
@@ -120,11 +124,11 @@ public class RestModelRepository extends Observable implements IModelRepository 
 	}
 
 	private String getUrlForModelDownload(ModelId modelId) {
-		return String.format(FILE_DOWNLOAD_FORMAT, modelId.getPrettyFormat());
+		return String.format(FILE_DOWNLOAD_FORMAT, getPrettyFormat(modelId));
 	}
 
 	private String getUrlForModel(ModelId modelId) {
-		return String.format(MODELID_RESOURCE_FORMAT, modelId.getPrettyFormat());
+		return String.format(MODELID_RESOURCE_FORMAT, getPrettyFormat(modelId));
 	}
 
 	@Override
@@ -153,7 +157,7 @@ public class RestModelRepository extends Observable implements IModelRepository 
 	@Override
 	public Attachment generateCode(ModelId model, String serviceKey) {
 		try {
-			String url = "generators/" + URLEncoder.encode(serviceKey, "utf-8") + "/models/" + model.getPrettyFormat();
+			String url = "generators/" + URLEncoder.encode(serviceKey, "utf-8") + "/models/" + getPrettyFormat(model);
 			Attachment result = httpClient.executeGetAttachment(url);
 			return result;
 		} catch (RepositoryException e) {
