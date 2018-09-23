@@ -75,31 +75,22 @@
 				<configuration>
 					<filesets combine.children="append">
 						<fileset>
-							<directory>${basedir}/../org.eclipse.vorto.editor.datatype.ide/src-gen/</directory>
+							<directory>${project.basedir}/../org.eclipse.vorto.editor.datatype.ide/src-gen/</directory>
 							<includes>
 								<include>**/*</include>
 							</includes>
 						</fileset>
 						<fileset>
-							<directory>${basedir}/../org.eclipse.vorto.editor.datatype.ui/src-gen/</directory>
+							<directory>${project.basedir}/../org.eclipse.vorto.editor.datatype.ui/src-gen/</directory>
 							<includes>
 								<include>**/*</include>
 							</includes>
 						</fileset>
 						<fileset>
-							<directory>${basedir}/../org.eclipse.vorto.editor.datatype.web/src-gen/</directory>
+							<directory>${project.basedir}/../org.eclipse.vorto.editor.datatype.tests/src-gen/</directory>
 							<includes>
 								<include>**/*</include>
 							</includes>
-						</fileset>
-						<fileset>
-							<directory>${basedir}/../org.eclipse.vorto.editor.datatype.tests/src-gen/</directory>
-							<includes>
-								<include>**/*</include>
-							</includes>
-						</fileset>
-						<fileset>
-							<directory>${basedir}/model/generated/</directory>
 						</fileset>
 					</filesets>
 				</configuration>

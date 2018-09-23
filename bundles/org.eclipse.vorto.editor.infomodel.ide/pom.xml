@@ -97,37 +97,28 @@
 				<configuration>
 					<filesets combine.children="append">
 						<fileset>
-							<directory>${basedir}/../org.eclipse.vorto.editor.informationmodel/src-gen/</directory>
+							<directory>${project.basedir}/../org.eclipse.vorto.editor.informationmodel/src-gen/</directory>
 							<includes>
 								<include>**/*</include>
 							</includes>
 						</fileset>
 						<fileset>
-							<directory>${basedir}/../org.eclipse.vorto.editor.informationmodel.ide/src-gen/</directory>
+							<directory>${project.basedir}/../org.eclipse.vorto.editor.informationmodel.ide/src-gen/</directory>
 							<includes>
 								<include>**/*</include>
 							</includes>
 						</fileset>
 						<fileset>
-							<directory>${basedir}/../org.eclipse.vorto.editor.informationmodel.ui/src-gen/</directory>
+							<directory>${project.basedir}/../org.eclipse.vorto.editor.informationmodel.ui/src-gen/</directory>
 							<includes>
 								<include>**/*</include>
 							</includes>
 						</fileset>
 						<fileset>
-							<directory>${basedir}/../org.eclipse.vorto.editor.informationmodel.web/src-gen/</directory>
+							<directory>${project.basedir}/../org.eclipse.vorto.editor.informationmodel.tests/src-gen/</directory>
 							<includes>
 								<include>**/*</include>
 							</includes>
-						</fileset>
-						<fileset>
-							<directory>${basedir}/../org.eclipse.vorto.editor.informationmodel.tests/src-gen/</directory>
-							<includes>
-								<include>**/*</include>
-							</includes>
-						</fileset>						
-						<fileset>
-							<directory>${basedir}/model/generated/</directory>
 						</fileset>
 					</filesets>
 				</configuration>

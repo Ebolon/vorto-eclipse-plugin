@@ -108,19 +108,16 @@
 				<configuration>
 					<filesets combine.children="append">
 						<fileset>
-							<directory>${basedir}/../org.eclipse.vorto.editor.mapping/src-gen/</directory>
+							<directory>${project.basedir}/../org.eclipse.vorto.editor.mapping/src-gen/</directory>
 							<includes>
 								<include>**/*</include>
 							</includes>
 						</fileset>
 						<fileset>
-							<directory>${basedir}/../org.eclipse.vorto.editor.mapping.ide/src-gen/</directory>
+							<directory>${project.basedir}/../org.eclipse.vorto.editor.mapping.ide/src-gen/</directory>
 							<includes>
 								<include>**/*</include>
 							</includes>
-						</fileset>					
-						<fileset>
-							<directory>${basedir}/model/generated/</directory>
 						</fileset>
 					</filesets>
 				</configuration>
