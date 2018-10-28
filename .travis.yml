@@ -15,7 +15,7 @@ before_script:
   - cd ..
   - git clone https://github.com/eclipse/vorto.git
   - cd vorto
-  - mvn clean install -f pom.xml
+  - mvn -B -q clean install -f pom.xml
   - cd ..
   - cd vorto-eclipse-plugin
  
@@ -23,7 +23,7 @@ before_install: echo "MAVEN_OPTS='-Xms1g -Xmx2g -XX:PermSize=512m -XX:MaxPermSiz
 
 install: true
 script:
-  - mvn -B -q clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  - mvn -B clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 
 cache:
   directories:
