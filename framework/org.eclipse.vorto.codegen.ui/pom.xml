@@ -25,9 +25,8 @@
 				<version>3.1.1</version>
 				<executions>
 					<execution>
-						<?m2e execute onConfiguration?>
 						<id>copy</id>
-						<phase>process-sources</phase>
+						<phase>add-source</phase>
 						<goals>
 							<goal>copy</goal>
 						</goals>
