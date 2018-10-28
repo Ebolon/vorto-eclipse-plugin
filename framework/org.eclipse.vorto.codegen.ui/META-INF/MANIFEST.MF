@@ -18,18 +18,24 @@ Require-Bundle: org.eclipse.vorto.core,
  org.apache.commons.lang3,
  org.apache.commons.io,
  org.eclipse.ui.console,
- org.eclipse.text,
- org.eclipse.vorto.codegen
+ org.eclipse.text
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: icons/,
- .
+ .,
+ lib/generator-api.jar
 Import-Package: org.eclipse.emf.common.util
-Export-Package: org.eclipse.vorto.codegen.ui,org.eclipse.vorto.codegen
- .ui.context,org.eclipse.vorto.codegen.ui.filewrite,org.eclipse.vorto.
- codegen.ui.handler,org.eclipse.vorto.codegen.ui.progresstask,org.ecli
- pse.vorto.codegen.ui.tasks,org.eclipse.vorto.codegen.ui.tasks.natures
- ,org.eclipse.vorto.codegen.ui.utils,org.eclipse.vorto.codegen.ui.wiza
- rd,org.eclipse.vorto.codegen.ui.wizard.command,org.eclipse.vorto.code
- gen.ui.wizard.generation.templates
+Export-Package: org.eclipse.vorto.codegen.api,
+ org.eclipse.vorto.codegen.api.mapping,
+ org.eclipse.vorto.codegen.ui,
+ org.eclipse.vorto.codegen.ui.context,
+ org.eclipse.vorto.codegen.ui.filewrite,
+ org.eclipse.vorto.codegen.ui.handler,
+ org.eclipse.vorto.codegen.ui.progresstask,
+ org.eclipse.vorto.codegen.ui.tasks,
+ org.eclipse.vorto.codegen.ui.tasks.natures,
+ org.eclipse.vorto.codegen.ui.utils,
+ org.eclipse.vorto.codegen.ui.wizard,
+ org.eclipse.vorto.codegen.ui.wizard.command,
+ org.eclipse.vorto.codegen.ui.wizard.generation.templates
 Automatic-Module-Name: org.eclipse.vorto.codegen.ui

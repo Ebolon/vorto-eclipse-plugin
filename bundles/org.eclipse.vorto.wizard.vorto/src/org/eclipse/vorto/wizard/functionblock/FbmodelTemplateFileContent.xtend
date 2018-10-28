@@ -22,26 +22,25 @@ import org.eclipse.vorto.codegen.ui.context.IModelProjectContext
 class FbmodelTemplateFileContent implements ITemplate<IModelProjectContext> {
 		
 	override getContent(IModelProjectContext context,InvocationContext invocationContext) {
-		return '''
-	namespace «context.modelId.namespace»
-	version «context.modelId.version»
-	displayname "«context.modelId.name»"
-	description "«context.modelDescription»"
-	functionblock «context.modelId.name» {
-
-		configuration {
-		}
-
-		status {
-		}
-
-		fault {
-		}
-
-		operations {
-		}
+		return 
+	"namespace " + context.modelId.namespace + "\n" +
+	"version " + context.modelId.version + "\n" +
+	"displayname \"" + context.modelId.name + "\"\n" +
+	"description \"" + context.modelDescription + "\"\n" +
+	"functionblock " + context.modelId.name + " {" +
+	"
+	configuration {
 	}
-		'''
+
+	status {
 	}
-	
+
+	fault {
+	}
+
+	operations {
+	}
+}
+	"
+	}
 }

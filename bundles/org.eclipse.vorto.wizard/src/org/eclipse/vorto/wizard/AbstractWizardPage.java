@@ -24,8 +24,6 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.WizardPage;
 
-import com.google.common.base.Strings;
-
 public abstract class AbstractWizardPage extends WizardPage {
 
 	public static final String PROJECTNAME_REGEX = "[A-Z][a-zA-Z0-9_]*$";
@@ -58,7 +56,7 @@ public abstract class AbstractWizardPage extends WizardPage {
 	}
 
 	protected boolean validateStrExist(String string, String errorMsgToBeShown) {
-		if (Strings.isNullOrEmpty(string)) {
+		if (string == null || string.equals("")) {
 			this.setErrorMessage(errorMsgToBeShown);
 			return false;
 		}

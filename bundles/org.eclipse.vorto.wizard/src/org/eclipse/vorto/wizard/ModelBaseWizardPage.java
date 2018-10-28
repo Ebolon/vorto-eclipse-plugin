@@ -35,7 +35,6 @@ import org.eclipse.vorto.core.api.model.model.ModelIdFactory;
 import org.eclipse.vorto.core.api.model.model.ModelType;
 import org.eclipse.vorto.core.ui.model.IModelProject;
 
-import com.google.common.base.Strings;
 
 public abstract class ModelBaseWizardPage extends AbstractWizardPage  implements IModelProjectContext {
 
@@ -141,7 +140,8 @@ public abstract class ModelBaseWizardPage extends AbstractWizardPage  implements
 		Collection<Validator> validators = new ArrayList<Validator>();
 		validators.add(new Validator() {
 			public ValidationResult validate() {
-				if (Strings.nullToEmpty(id.getNamespace()).trim().isEmpty()) {
+				String namespace =  id.getNamespace() != null ? id.getNamespace() : "";
+				if (namespace.trim().isEmpty()) {
 					return invalid("Model namespace must not be empty.");
 				}
 				return valid();
@@ -149,7 +149,8 @@ public abstract class ModelBaseWizardPage extends AbstractWizardPage  implements
 		});
 		validators.add(new Validator() {
 			public ValidationResult validate() {
-				if (Strings.nullToEmpty(id.getName()).trim().isEmpty()) {
+				String name =  id.getName() != null ? id.getName() : "";
+				if (name.trim().isEmpty()) {
 					return invalid("Model name must not be empty.");
 				}
 				return valid();
@@ -165,7 +166,8 @@ public abstract class ModelBaseWizardPage extends AbstractWizardPage  implements
 		});
 		validators.add(new Validator() {
 			public ValidationResult validate() {
-				if (Strings.nullToEmpty(id.getVersion()).trim().isEmpty()) {
+				String version =  id.getVersion() != null ? id.getVersion() : "";
+				if (version.trim().isEmpty()) {
 					return invalid("Model version must not be empty.");
 				}
 				return valid();

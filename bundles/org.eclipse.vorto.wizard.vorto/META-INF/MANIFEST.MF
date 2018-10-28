@@ -7,7 +7,6 @@ Bundle-ClassPath: .
 Bundle-Vendor: Eclipse.org/Vorto
 Require-Bundle: org.eclipse.vorto.core,
  org.eclipse.vorto.core.ui,
- org.eclipse.vorto.codegen,
  org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.core.resources,
@@ -16,7 +15,8 @@ Require-Bundle: org.eclipse.vorto.core,
  org.eclipse.vorto.codegen.ui,
  org.eclipse.vorto.wizard,
  org.eclipse.xtext.xbase.lib,
- org.eclipse.xtend.lib
+ org.eclipse.xtend.lib,
+ org.eclipse.xtext.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.vorto.wizard.vorto,org.eclipse.vorto.wizar

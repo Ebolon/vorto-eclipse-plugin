@@ -18,7 +18,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+import org.apache.commons.lang3.StringUtils;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -137,6 +137,11 @@ public class VortoModelProject implements IModelProject {
 		return mappingModels;
 
 	}
+	
+	public static String getModelFileName(ModelId modelId) {
+		return modelId.getNamespace() + "_" + modelId.getName() + "_"
+				+ StringUtils.replace(modelId.getVersion(), ".", "_") + modelId.getModelType().getExtension();
+	}
 
 	@Override
 	public IModelElement addModelElement(ModelId modelId, InputStream inputStream) {
@@ -145,7 +150,7 @@ public class VortoModelProject implements IModelProject {
 			final ModelType modelType = modelId.getModelType();
 			IFolder folder = getFolderByType(modelId.getModelType());
 
-			IFile file = folder.getFile(modelId.getFileName());
+			IFile file = folder.getFile(getModelFileName(modelId));
 
 			if (file.exists()) {
 				file.delete(true, new NullProgressMonitor());

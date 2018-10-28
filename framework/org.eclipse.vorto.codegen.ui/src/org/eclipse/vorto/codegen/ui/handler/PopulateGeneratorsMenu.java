@@ -139,7 +139,7 @@ public class PopulateGeneratorsMenu extends CompoundContributionItem {
 		IExtensionRegistry extensionRegistry = Platform.getExtensionRegistry();
 		List<IConfigurationElement> registersGenerators = new ArrayList<IConfigurationElement>();
 		final IConfigurationElement[] generators = extensionRegistry
-				.getConfigurationElementsFor(IVortoCodeGenerator.GENERATOR_ID);
+				.getConfigurationElementsFor("org.eclipse.vorto.codegen.org_eclipse_vorto_codegen_Generators");
 		for (IConfigurationElement e : generators) {
 			registersGenerators.add(e);
 		}

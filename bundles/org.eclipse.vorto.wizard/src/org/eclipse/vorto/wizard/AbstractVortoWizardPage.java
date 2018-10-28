@@ -28,8 +28,6 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.vorto.codegen.ui.context.IProjectContext;
 
-import com.google.common.base.Strings;
-
 public abstract class AbstractVortoWizardPage extends WizardPage implements
 		IProjectContext {
 
@@ -78,7 +76,7 @@ public abstract class AbstractVortoWizardPage extends WizardPage implements
 	}
 
 	protected boolean validateStrExist(String string, String errorMsgToBeShown) {
-		if (Strings.isNullOrEmpty(string)) {
+		if (string == null || string.equals("")) {
 			this.setErrorMessage(errorMsgToBeShown);
 			return false;
 		}

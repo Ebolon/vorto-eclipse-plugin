@@ -22,14 +22,12 @@ import org.eclipse.vorto.codegen.ui.context.IModelProjectContext
 class InfomodelTemplateFileContent implements ITemplate<IModelProjectContext> {
 
 	override getContent(IModelProjectContext context,InvocationContext invocationContext) {
-		return '''
-	namespace «context.modelId.namespace»
-	version «context.modelId.version»
-	displayname "«context.modelId.name»"
-	description "«context.modelDescription»"
-	infomodel «context.modelId.name» {
-	}
-		'''
+		return 
+	"namespace " + context.modelId.namespace + "\n" + 
+	"version " + context.modelId.version + "\n" +
+	"displayname \"" + context.modelId.name + "\"\n" +
+	"description \"" + context.modelDescription + "\"\n" +
+	"infomodel " + context.modelId.name + " {\n}"
 	}
 
 }

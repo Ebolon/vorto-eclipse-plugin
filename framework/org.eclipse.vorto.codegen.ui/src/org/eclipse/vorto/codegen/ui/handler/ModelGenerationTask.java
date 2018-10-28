@@ -17,6 +17,7 @@ package org.eclipse.vorto.codegen.ui.handler;
 import org.eclipse.vorto.codegen.api.AbstractTemplateGeneratorTask;
 import org.eclipse.vorto.codegen.api.ITemplate;
 import org.eclipse.vorto.codegen.ui.context.IModelProjectContext;
+import org.eclipse.vorto.core.ui.model.VortoModelProject;
 
 public class ModelGenerationTask extends
 		AbstractTemplateGeneratorTask<IModelProjectContext> {
@@ -32,7 +33,7 @@ public class ModelGenerationTask extends
 
 	@Override
 	public String getFileName(IModelProjectContext ctx) {
-		return ctx.getModelId().getFileName();
+		return VortoModelProject.getModelFileName(ctx.getModelId());
 	}
 
 	@Override

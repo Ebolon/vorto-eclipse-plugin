@@ -24,8 +24,6 @@ import org.eclipse.vorto.core.api.model.model.ModelType;
 import org.eclipse.vorto.core.ui.model.IModelProject;
 import org.eclipse.vorto.wizard.ModelBaseWizardPage;
 
-import com.google.common.base.Strings;
-
 public class MappingModellWizardPage extends ModelBaseWizardPage {
 
 	private static final String DEFAULT_VERSION = "1.0.0";
@@ -54,7 +52,7 @@ public class MappingModellWizardPage extends ModelBaseWizardPage {
 		validators.add(new Validator() {
 			public ValidationResult validate() {
 				String platform = txtPlatform.getText();
-				if (Strings.isNullOrEmpty(platform)) {
+				if (platform == null || platform.equals("")) {
 					return invalid("Target Platform must be provided.");
 				}
 				return valid();

@@ -18,7 +18,6 @@ import java.io.IOException;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.vorto.codegen.api.Generated;
 
 /**
  * Writes the {@link Generated} produced by the {@link ICodeGenerator} in a

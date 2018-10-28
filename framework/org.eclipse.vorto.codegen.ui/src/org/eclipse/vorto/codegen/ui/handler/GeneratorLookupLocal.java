@@ -25,7 +25,7 @@ import org.eclipse.vorto.core.ui.MessageDisplayFactory;
 
 public class GeneratorLookupLocal implements IGeneratorLookup {
 	
-	private static final String GENERATOR_ID = IVortoCodeGenerator.GENERATOR_ID;
+	private static final String GENERATOR_ID = "org.eclipse.vorto.codegen.org_eclipse_vorto_codegen_Generators";
 	private static final String CLASS = "class";
 	
 	private static List<IGeneratorResolver> resolvers = new ArrayList<>();
