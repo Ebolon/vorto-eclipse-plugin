@@ -14,41 +14,41 @@
 	<name>Vorto Code Generation Infrastructure UI</name>
 
 	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.eclipse.xtend</groupId>
-					<artifactId>xtend-maven-plugin</artifactId>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-dependency-plugin</artifactId>
-					<version>3.1.1</version>
-					<executions>
-						<execution>
-							<id>copy</id>
-							<phase>process-sources</phase>
-							<goals>
-								<goal>copy</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<artifactItems>
-							<item>
-								<groupId>org.eclipse.vorto</groupId>
-								<artifactId>generator-api</artifactId>
-								<version>0.10.0-SNAPSHOT</version>
-							</item>
-						</artifactItems>
-						<outputDirectory>lib</outputDirectory>
-						<stripVersion>true</stripVersion>
-						<overWriteReleases>true</overWriteReleases>
-						<overWriteSnapshots>true</overWriteSnapshots>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+		<plugins>
+ 			<plugin>
+ 				<groupId>org.eclipse.xtend</groupId>
+ 				<artifactId>xtend-maven-plugin</artifactId>
+ 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.1</version>
+				<executions>
+					<execution>
+						<?m2e execute onConfiguration?>
+						<id>copy</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<artifactItems>
+						<item>
+							<groupId>org.eclipse.vorto</groupId>
+							<artifactId>generator-api</artifactId>
+							<version>0.10.0-SNAPSHOT</version>
+						</item>
+					</artifactItems>
+					<outputDirectory>lib</outputDirectory>
+					<stripVersion>true</stripVersion>
+					<overWriteReleases>true</overWriteReleases>
+					<overWriteSnapshots>true</overWriteSnapshots>
+				</configuration>
+			</plugin>
+		</plugins>
+
 	</build>
 
 </project>
